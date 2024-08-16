@@ -2,13 +2,13 @@ const {MessageEmbed} = require("discord.js");
 const Util = require("../../Util/Util.js");
 
 module.exports = {
-    name: "game",
+    name: "codenames",
     description: "Check info about the current game!",
     permissions: Util.permissions.requiresGame,
     exe(message, args, handler, game, withImg = true) {
           const embed = new MessageEmbed();
           embed.setAuthor(game.master.username, game.master.displayAvatarURL());
-          embed.setColor("RANDOM");
+          embed.setColor("كلمات.js");
           embed.setDescription(game.scores());
           for (let team in game.teams) {
               team = game.teams[team];
